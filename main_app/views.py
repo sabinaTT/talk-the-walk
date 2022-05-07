@@ -3,7 +3,7 @@ from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import Stack
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 
 # Create your views here.
@@ -32,3 +32,10 @@ class Create_Stack(CreateView):
 class StackDetail(DetailView):
     model = Stack
     template_name = 'stack_detail.html'
+
+class Update_Stack(UpdateView):
+    model = Stack
+    fields = ['name']
+    template_name = 'update_stack.html'
+    success_url = '/stacks'
+
