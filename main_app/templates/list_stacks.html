@@ -2,6 +2,8 @@
 {% block body %}
     <h1>Choose the stack you want to practice</h1>
     {% for stack in stacks %}
-    <button class='stack-btn'>{{ stack.name }}</button>
+    <a href='{% url "stack_detail" stack.pk %}'>
+        <button class='stack-btn'>{{ stack.name }}</button>
+    </a>
     {% endfor %}
 {% endblock %}
