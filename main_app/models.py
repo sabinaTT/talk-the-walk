@@ -23,9 +23,6 @@ class Question(models.Model):
     def __str__(self):
         return self.the_question
 
-    class Meta:
-        ordering = ['created_at']
-
 
 
 

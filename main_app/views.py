@@ -3,6 +3,7 @@ from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import Stack
+from .models import Question
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 
