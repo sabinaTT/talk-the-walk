@@ -40,3 +40,27 @@ class Update_Stack(UpdateView):
     template_name = 'update_stack.html'
     success_url = '/stacks'
 
+def list_questions(request):
+    questions  = Question.objects.all()
+    return render(request, 'list_questions.html', {'questions': questions})
+
+def view_question(request, question_id):
+    question = Question.objects.get(id=question_id)
+    return render(request, 'view_question.html', ['question': question])
+
+class Create_Question(CreateView):
+    model = Question
+    fields = '__all__'
+    template_name = 'create_question.html'
+    success_url = '/questions/'
+
+class Update_Question(UpdateView):
+    model = Question
+    fields = ['the_question', 'answer', 'stack']
+    template_name = 'update_question.html'
+    success_url = '/questions/'
+
+class Delete_Question(DeleteView):
+    model = Question
+    template_name = 'confirm_delete_question.html'
+    success_url = '/questions/'
