@@ -40,6 +40,9 @@ h1 {
 }
 .card {
     background-color: #ECFEE8;
-    width: 1000px;
-    height: 600px;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    padding: auto;
+    position: relative;
 }
