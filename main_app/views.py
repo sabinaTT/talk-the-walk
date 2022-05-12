@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import Stack
 from .models import Question
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 
 # Create your views here.
@@ -40,13 +40,18 @@ class Update_Stack(UpdateView):
     template_name = 'update_stack.html'
     success_url = '/stacks'
 
+class DeleteStack(DeleteView):
+    model = Stack
+    template_name = 'delete-stack.html'
+    success_url = '/questions/'
+
 def list_questions(request):
     questions  = Question.objects.all()
     return render(request, 'list_questions.html', {'questions': questions})
 
 def view_question(request, question_id):
     question = Question.objects.get(id=question_id)
-    return render(request, 'view_question.html', ['question': question])
+    return render(request, 'view_question.html', {'question': question})
 
 class Create_Question(CreateView):
     model = Question
@@ -64,3 +69,4 @@ class Delete_Question(DeleteView):
     model = Question
     template_name = 'confirm_delete_question.html'
     success_url = '/questions/'
+
