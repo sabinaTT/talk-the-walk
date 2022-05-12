@@ -57,7 +57,7 @@ class Create_Question(CreateView):
     model = Question
     fields = '__all__'
     template_name = 'question_form.html'
-    success_url = '/questions'
+    success_url = '/stacks'
 
 class Update_Question(UpdateView):
     model = Question

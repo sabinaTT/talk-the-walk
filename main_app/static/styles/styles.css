@@ -1,6 +1,6 @@
-/* * {
-
-} */
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 body {
     background-color: #41337A;
 }
@@ -46,3 +46,4 @@ h1 {
     padding: auto;
     position: relative;
 }
+
