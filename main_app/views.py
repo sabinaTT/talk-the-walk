@@ -2,9 +2,8 @@ from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from .models import Stack
-from .models import Question
-from django.views.generic.edit import CreateView, UpdateView
+from .models import Stack, Question
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 
 # Create your views here.
@@ -40,27 +39,34 @@ class Update_Stack(UpdateView):
     template_name = 'update_stack.html'
     success_url = '/stacks'
 
-def list_questions(request):
-    questions  = Question.objects.all()
-    return render(request, 'list_questions.html', {'questions': questions})
+class DeleteStack(DeleteView):
+    model = Stack
+    template_name = 'delete_stack.html'
+    success_url = '/questions/'
 
-def view_question(request, question_id):
+# def questions_index(request):
+#     questions  = Question.objects.all()
+#     return render(request, 'question_index.html', {'questions': questions})
+
+def questions_show(request, question_id):
+    print(question_id)
     question = Question.objects.get(id=question_id)
-    return render(request, 'view_question.html', ['question': question])
+    return render(request, 'question_show.html', {'question': question})
 
 class Create_Question(CreateView):
     model = Question
     fields = '__all__'
-    template_name = 'create_question.html'
-    success_url = '/questions/'
+    template_name = 'question_form.html'
+    success_url = '/stacks'
 
 class Update_Question(UpdateView):
     model = Question
     fields = ['the_question', 'answer', 'stack']
-    template_name = 'update_question.html'
-    success_url = '/questions/'
+    template_name = 'question_update.html'
+    success_url = '/questions'
 
 class Delete_Question(DeleteView):
     model = Question
-    template_name = 'confirm_delete_question.html'
-    success_url = '/questions/'
+    template_name = 'question_confirm_delete.html'
+    success_url = '/questions'
+
