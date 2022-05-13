@@ -88,7 +88,7 @@ class Delete_Question(DeleteView):
 @login_required
 def profile(request, username):
     user = User.objects.get(username=username)
-    return render(request, 'list_stacks.html', {'username':username,})
+    return render(request, 'list_stacks.html', {'username':username, })
 
 # django auth
 def signup_view(request):
