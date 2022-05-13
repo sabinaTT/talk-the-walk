@@ -5,6 +5,8 @@ from django.views.generic.base import TemplateView
 from .models import Stack, Question
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
+from django.contrib.auth import authenticate, login, logout 
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 # Create your views here.
 
@@ -70,3 +72,46 @@ class Delete_Question(DeleteView):
     template_name = 'question_confirm_delete.html'
     success_url = '/questions'
 
+# django auth
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(requst.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            print('Hello', user.username)
+            return HttpResponseRedirect('/user/'+str(user))
+        else:
+                return render(request, 'signup.html', {'form': form})
+    else:
+            form = UserCreationForm()
+            return render(request, 'signup.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/home')
+
+def login_view(request):
+    # if post, then authenticate (user submitted username and password)
+    if request.method == 'POST':
+        form = AuthenticationForm(request, request.POST)
+        # form = LoginForm(request.POST)
+        if form.is_valid():
+            u = form.cleaned_data['username']
+            p = form.cleaned_data['password']
+            user = authenticate(username = u, password = p)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect('/user/'+u)
+                else:
+                    print('The account has been disabled.')
+                    return render(request, 'login.html', {'form': form})
+            else:
+                print('The username and/or password is incorrect.')
+                return render(request, 'login.html', {'form': form})
+        else:
+            return render(request, 'signup.html', {'form': form })
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
