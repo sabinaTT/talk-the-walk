@@ -16,6 +16,7 @@ urlpatterns = [
     path('questions/create/', views.Create_Question.as_view(), name='question_form'),
     path('questions/<int:pk>/update/', views.Update_Question.as_view(), name='question_update'),
     path('questions/<int:pk>/delete/', views.Delete_Question.as_view(), name='question_confirm_delete'),
+    path('user/<username>', views.profile, name='list_stacks'),
     # AUTH
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
