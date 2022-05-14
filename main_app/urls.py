@@ -11,8 +11,8 @@ urlpatterns = [
     path('stacks/<int:pk>/update', views.Update_Stack.as_view(), name='update_stack'),
     path('stacks/<int:pk>delete', views.DeleteStack.as_view(), name='delete_stack'),
     # QUESTION MODEL
-    # path('questions/', views.questions_index, name='question_index'),
-    path('questions/<int:question_id>', views.questions_show, name='question_show'),
+    path('questions/', views.questions_index, name='questions_index'),
+    path('questions/<int:question_id>', views.questions_show, name='questions_show'),
     path('questions/create/', views.Create_Question.as_view(), name='question_form'),
     path('questions/<int:pk>/update/', views.Update_Question.as_view(), name='question_update'),
     path('questions/<int:pk>/delete/', views.Delete_Question.as_view(), name='question_confirm_delete'),

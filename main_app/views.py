@@ -1,16 +1,16 @@
 from django.shortcuts import render
 from django.views import View
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from .models import Stack, Question
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # Create your views here.
@@ -62,21 +62,20 @@ class DeleteStack(DeleteView):
     template_name = 'delete_stack.html'
     success_url = '/questions/'
 
-# def questions_index(request):
-#     questions  = Question.objects.all()
-#     return render(request, 'question_index.html', {'questions': questions})
+def questions_index(request):
+    questions  = Question.objects.all()
+    return render(request, 'questions_index.html', {'questions': questions})
 
 def questions_show(request, question_id):
-    print(question_id)
     question = Question.objects.get(id=question_id)
-    return render(request, 'question_show.html', {'question': question})
+    return render(request, 'questions_show.html', {'question': question})
 
 @method_decorator(login_required, name='dispatch')
 class Create_Question(CreateView):
     model = Question
     fields = '__all__'
     template_name = 'question_form.html'
-    success_url = '/stacks'
+    success_url = '/questions'
 
 @method_decorator(login_required, name='dispatch')
 class Update_Question(UpdateView):
