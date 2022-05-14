@@ -8,6 +8,6 @@
     {% endfor %}
     <div>
         <a href='../questions/create'><button>Create a new question</button></a>
-        <a href='new'><button>Create a new stack</button></a>
+        <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
     </div>
 {% endblock %}
