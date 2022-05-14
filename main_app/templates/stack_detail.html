@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% block body %}
 <h3>{{ stack.name }}</h3>
-<div class='card'>
+
 
 </div>
-{% for question in questions %}
+{% for question in stack.question_set.all %}
     <div>
-        <a href="{% url 'question_show' question.pk %}">
+        <a href="{% url 'questions_show' question.pk %}">
             <div>
                 <span>{{ question.the_question }}</span>
-                <span>{{ question.stack.name }}</span>
             </div>
         </a>
-    </div>
+
 {% endfor %}
 <button id='pass_button'>Pass</button>
 <button id='flip_button'>Flip</button>
