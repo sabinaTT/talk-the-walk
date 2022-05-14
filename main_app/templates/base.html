@@ -12,10 +12,14 @@
 </head>
 <body>
     {% block body %}
-
-        <h1>Rastgele baskan :D</h1>
-        <h2>ha buraya bir seyler.. </h2>
-
+    {% if user.is_authenticated %}
+        <span><a href='{% url "../stacks/" %}'>My Stacks</a></span>
+        <span><a href='{% url "logout" %}'>Logout</a></span>
+        {% else %}
+        <span><a href='{% url "login" %}'>Login</a></span>
+        <span><a href='{% url "signup" %}'>Signup</a></span>
+    {% endif %}
+    <a href="/about">About</a>
     {% endblock %}
 </body>
 </html>
