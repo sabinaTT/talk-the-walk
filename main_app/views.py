@@ -38,6 +38,12 @@ class Create_Stack(CreateView):
     template_name = 'create_stack.html'
     success_url = '/stacks/'
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return HttpResponseRedirect('/stacks')
+
 @method_decorator(login_required, name='dispatch')
 class StackDetail(DetailView):
     model = Stack
