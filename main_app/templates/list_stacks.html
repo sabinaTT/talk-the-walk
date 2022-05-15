@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% block body %}
     <h2>Choose the stack you want to practice</h2>
+        <span>
+            {% for stack in stacks %}
+            <a href='{% url "stack_detail" stack.pk %}'></a>
 
-    {% for stack in stacks %}
-    <a href='{% url "stack_detail" stack.pk %}'>
-        <a>{{ stack.name }}</a>
-    {% endfor %}
+            <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
+            {% endfor %}
+        </span>
+    <!-- {% for stack in stacks %}
+    <a href='{% url "stack_detail" stack.pk %}'></a>
+    {% endfor %} -->
     <div>
-        <a href='../questions/create'><button>Create a new question</button></a>
         <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
     </div>
+
 {% endblock %}

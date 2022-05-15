@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.urls import reverse
+# from django.utils.translation import gettext_lazy as _
 
 
 # Create your views here.
@@ -36,7 +37,7 @@ class Create_Stack(CreateView):
     model = Stack
     fields = ['name']
     template_name = 'create_stack.html'
-    success_url = '/stacks/'
+    success_url = '/profile'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -75,7 +76,7 @@ class Create_Question(CreateView):
     model = Question
     fields = '__all__'
     template_name = 'question_form.html'
-    success_url = '/questions'
+    success_url = '/stack_detail'
 
 @method_decorator(login_required, name='dispatch')
 class Update_Question(UpdateView):
@@ -93,7 +94,8 @@ class Delete_Question(DeleteView):
 @login_required
 def profile(request, username):
     user = User.objects.get(username=username)
-    return render(request, 'list_stacks.html', {'username':username, })
+    stacks = Stack.objects.filter(user=user)
+    return render(request, 'list_stacks.html', {'username':username, 'stacks': stacks })
 
 # django auth
 def signup_view(request):
@@ -139,3 +141,4 @@ def login_view(request):
         # form = LoginForm()
         form = AuthenticationForm()
         return render(request, 'login.html', {'form': form})
+

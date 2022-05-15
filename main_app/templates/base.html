@@ -26,14 +26,8 @@
 
         <span><a href='{% url "logout" %}'>Logout</a></span>
         <span><a href='{% url "list_stacks" %}'>My Stacks</a></span>
+        <span><a href='{% url "questions_index" %}'>My Questions</a></span>
     </nav>
-        <span>
-            {% for stack in stacks %}
-            <a href='{% url "stack_detail" stack.pk %}'></a>
-
-            <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
-            {% endfor %}
-        </span>
 
         {% endif %}
         <!-- <span><a href='{% url "login" %}'>Login</a></span>

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class Stack(models.Model):
@@ -14,7 +15,7 @@ class Stack(models.Model):
         ordering = ['name']
 
 class Question(models.Model):
-    the_question = models.CharField(max_length=100)
+    the_question = models.CharField(max_length=100, verbose_name=_("Question"))
     answer = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
     stack = models.ForeignKey(Stack, on_delete=models.CASCADE)
