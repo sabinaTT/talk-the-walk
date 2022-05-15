@@ -1,7 +1,8 @@
-* {
+/* * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-body {
+} */
+ 
+/* body {
     background-color: #41337A;
 }
 a:link, a:visited, a:hover, a:active {
@@ -31,9 +32,10 @@ h1 {
 #start_btn:hover {
     transition: 0.2s;
     animation-duration: 1s;
-    /* background-color: #ECFEE8; */
+    background-color: #ECFEE8;
     letter-spacing: 5px;
 }
+
 #dibi {
     margin: auto;
     width: 33%;
@@ -45,5 +47,4 @@ h1 {
     margin: auto;
     padding: auto;
     position: relative;
-}
-
+} */

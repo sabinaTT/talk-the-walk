@@ -7,19 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='{% static "styles/styles.css" %}' />
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Cardo&family=Indie+Flower&family=Macondo&family=Monoton&family=Orelega+One&family=Rock+Salt&family=Stardos+Stencil&family=Tajawal:wght@200&display=swap" rel="stylesheet">
+    
     <script src='{% static "scripts/app.js" %}' defer></script>
     <title>Talk the Walk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    {% block body %}
-    <!-- {% if user.is_authenticated %}
+    <!-- <div class='container'>
+        <div class='row'>
+            <div class='col-sm-12 col-md-6'>Col One</div>
+            <div class='col-sm-12 col-md-6'>Col Two</div>
+            <div class='col-sm-10'>Col Three</div>
+        </div>
+    </div> -->
+    <nav>
+
+    {% if user.is_authenticated %}
 
         <span><a href='{% url "logout" %}'>Logout</a></span>
-        {% else %}
-        <span><a href='{% url "login" %}'>Login</a></span>
-        <span><a href='{% url "signup" %}'>Signup</a></span>
-    {% endif %}
-    <a href="/about">About</a> -->
+        <span><a href='{% url "list_stacks" %}'>My Stacks</a></span>
+    </nav>
+        <span>
+            {% for stack in stacks %}
+            <a href='{% url "stack_detail" stack.pk %}'></a>
+
+            <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
+            {% endfor %}
+        </span>
+
+        {% endif %}
+        <!-- <span><a href='{% url "login" %}'>Login</a></span>
+        <span><a href='{% url "signup" %}'>Signup</a></span> -->
+
+    {% block nav %}
     {% endblock %}
+    {% block body %}
+    {% endblock %}
+
 </body>
 </html>
