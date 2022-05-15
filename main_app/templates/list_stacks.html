@@ -8,9 +8,6 @@
             <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
             {% endfor %}
         </span>
-    <!-- {% for stack in stacks %}
-    <a href='{% url "stack_detail" stack.pk %}'></a>
-    {% endfor %} -->
     <div>
         <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
     </div>

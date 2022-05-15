@@ -63,10 +63,12 @@ class DeleteStack(DeleteView):
     template_name = 'delete_stack.html'
     success_url = '/questions/'
 
+@login_required
 def questions_index(request):
     questions  = Question.objects.all()
     return render(request, 'questions_index.html', {'questions': questions})
 
+@login_required
 def questions_show(request, question_id):
     question = Question.objects.get(id=question_id)
     return render(request, 'questions_show.html', {'question': question})

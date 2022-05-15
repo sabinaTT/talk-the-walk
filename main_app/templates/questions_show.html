@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
-
+{% if user.is_authenticated  %}
 <h2>Question Details</h2>
 
 <div>
@@ -14,4 +14,7 @@
         <a href="{% url 'question_confirm_delete' question.id %}">Delete</a>
     </div>
 </div>
+{% else %}
+
+{% endif %}
 {% endblock %}

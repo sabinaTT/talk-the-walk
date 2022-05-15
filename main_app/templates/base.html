@@ -27,11 +27,11 @@
         <span><a href='{% url "logout" %}'>Logout</a></span>
         <span><a href='{% url "list_stacks" %}'>My Stacks</a></span>
         <span><a href='{% url "questions_index" %}'>My Questions</a></span>
+        {% endif %}
+
     </nav>
 
-        {% endif %}
-        <!-- <span><a href='{% url "login" %}'>Login</a></span>
-        <span><a href='{% url "signup" %}'>Signup</a></span> -->
+
 
     {% block nav %}
     {% endblock %}
