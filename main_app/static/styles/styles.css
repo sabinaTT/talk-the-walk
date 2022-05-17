@@ -138,6 +138,7 @@ input:hover {
 }
 label {
     font-size: 1.25rem;
+    font-family: 'Tajawal', sans-serif;
 }
 #save-stack:hover {
     font-weight: bold;
@@ -187,7 +188,10 @@ label {
 #h2-create-question {
     font-family: 'Tajawal', sans-serif;
 }
-
+#create-q-btn {
+    font-family: 'Tajawal', sans-serif;
+    margin-left: 10%;
+}
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
