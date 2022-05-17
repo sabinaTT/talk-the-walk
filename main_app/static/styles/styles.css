@@ -192,6 +192,37 @@ label {
     font-family: 'Tajawal', sans-serif;
     margin-left: 10%;
 }
+#view-question {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+}
+#question-label {
+    font-size: 1.75rem;
+    color: black;
+    font-weight: 950;
+
+}
+#edit-q-btn, #delete-q-btn {
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#edit-q-btn:hover, #delete-q-btn:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
+
+
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;

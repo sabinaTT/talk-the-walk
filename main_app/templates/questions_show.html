@@ -1,19 +1,28 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container-fluid">
-<h2>Question Details</h2>
-
-<div>
-    <div>
-        <p>Question: {{ question.the_question }}</p>
-        <p>Answer: {{ question.answer }}</p>
-        <p>Stack: {{ question.stack }}</p>
+    <div class="row">
+        <div class="col-sm-12">
+            <br />
+            <h2 class="h2" style='text-align: center'>Question Details</h2>
+        </div>
     </div>
-    <div>
-        <a href="{% url 'question_update' question.id %}">Edit</a>
-        <a href="{% url 'question_confirm_delete' question.id %}">Delete</a>
-    </div>
-</div>
+    <div class="row">
+        <div class="col-sm-9" id="view-question">
 
+
+                    <p ><span id='question-label'>Question:</span>
+                        <br/>{{ question.the_question }}</p>
+                    <p><span id='question-label'>Answer:</span>
+                        <br /> {{ question.answer }}</p>
+                    <p><span id='question-label'>Stack:</span>
+                        <br /> {{ question.stack }}</p>
+
+                <div>
+                    <a href="{% url 'question_update' question.id %}"><button id='edit-q-btn'>Edit</button></a>
+                    <a href="{% url 'question_confirm_delete' question.id %}" ><button id='delete-q-btn'>Delete</button></a>
+                </div>
+            </div>
+        </div>
 </div>
 {% endblock %}

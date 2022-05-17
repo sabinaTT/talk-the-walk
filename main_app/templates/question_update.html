@@ -1,10 +1,13 @@
 {% extends 'base.html' %} 
 {% block body %}
 <div class="container-fluid">
-<form action='' method='post'>
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type='submit' value='Update' />
-</form>
+    <div class="row"></div>
+    <div class="col-6-sm">
+        <form action='' method='post'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type='submit' value='Update' />
+        </form>
+    </div>
 </div>
 {% endblock %}
