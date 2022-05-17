@@ -138,6 +138,7 @@ input:hover {
 }
 label {
     font-size: 1.25rem;
+    font-family: 'Tajawal', sans-serif;
 }
 #save-stack:hover {
     font-weight: bold;
@@ -187,6 +188,93 @@ label {
 #h2-create-question {
     font-family: 'Tajawal', sans-serif;
 }
+
+#create-q-btn {
+    font-family: 'Tajawal', sans-serif;
+    margin-left: 10%;
+}
+#view-question {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+}
+#question-label {
+    font-size: 1.75rem;
+    color: black;
+    font-weight: 950;
+
+}
+#edit-q-btn, #delete-q-btn {
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#edit-q-btn:hover, #delete-q-btn:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
+#question_list_box {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+#update-q-btn {
+    font-family: 'Tajawal', sans-serif;
+    margin-left: 4.1rem;
+}
+#delete-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    font-family: 'Tajawal', sans-serif;
+}
+#yes-delete-q {
+    font-family: 'Tajawal', sans-serif;
+    float: right;
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 6rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#yes-delete-q:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
+#cancel-delete-btn {
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#cancel-delete-btn:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
+
+=======
 .create-question {
     position: fixed;
     top: 25%;
@@ -206,7 +294,36 @@ label {
     color: white;
     text-align: center;
 }
+
 p, h1 {
     text-align: justify;
-    text-justify: inter-word;
+    /* text-justify: inter-word; */
 }
+
+#view_stack_box {
+    background-color: #C2EFEB;
+    font-family: 'Tajawal', sans-serif;
+    width: auto;
+    height: auto;  
+    margin: 1rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+    color: black;
+    padding: 2rem;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+}
+#stack-name-stack-view {
+    font-family: 'Tajawal', sans-serif;
+    margin: 1rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+

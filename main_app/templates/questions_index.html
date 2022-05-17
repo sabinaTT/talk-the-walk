@@ -2,6 +2,7 @@
 {% block body %}
 <div class="container-fluid">
     <br />
+    <div id='question_list_box' class='col-sm-7'>
     <div class="row">
         <a href='../questions/create'>
             <h2 class='create-question'>Create a new question</h2>
@@ -18,8 +19,10 @@
             </a>
                 |  <span id='stack-name'>{{ question.stack }}</span>
             </div>
-        </div>
 
+    </div>
+{% endfor %}
+</div>
 {% endfor %}
 </div>
 </div>

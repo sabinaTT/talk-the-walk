@@ -1,22 +1,37 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container-fluid">
-<h3>{{ stack.name }}</h3>
+<div class="row">
+    <div class="col-sm-12" id='stack-name-stack-view'>
+        <h2>{{ stack.name }} Questions</h2>
+    </div>
 </div>
+
+    <div class="row">
+        <div class="col-sm-10"  id='view_stack_box'>
+
+
+
 
 {% for question in stack.question_set.all %}
     <div>
         <a href="{% url 'questions_show' question.pk %}">
-            <div>
+            <div>`
                 <span id="question-stk">{{ question.the_question }}</span>
                 <br />
             </div>
         </a>
 {% endfor %}
-        <span>Author: {{ stack.user }}</span>
-<button id='pass_button'>Pass</button>
-<button id='flip_button' onclick="changeCard()">Flip</button>
-
+<br />
+<!-- <button id='pass_button'>Pass</button>
+<button id='flip_button'>Flip</button> -->
 </div>
-
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <span>Author: {{ stack.user }}</span>
+    </div>  
+</div>
+</div>
 {% endblock %}
