@@ -27,9 +27,9 @@
 
     {% if user.is_authenticated %}
 
-        <span><a href='{% url "logout" %}'>Logout</a></span> | 
-        <span><a href='{% url "list_stacks" %}'>My Stacks</a></span> | 
-        <span><a href='{% url "questions_index" %}'>My Questions</a></span> | 
+        <span><a id='a-nav' href='{% url "logout" %}'>Logout</a></span> | 
+        <span><a id='a-nav' href='{% url "list_stacks" %}'>My Stacks</a></span> | 
+        <span><a id='a-nav' href='{% url "questions_index" %}'>My Questions</a></span> | 
         {% endif %}
 
     </nav>

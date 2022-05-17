@@ -34,9 +34,15 @@ nav {
     font-family: 'Tajawal', sans-serif;
     padding: 0.5rem;
 }
+#a-nav:hover, #a-nav:visited, #a-nav:hover, #a-nav:active {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none; 
-    color: white;
+    color: black;
+    font-family: 'Tajawal', sans-serif;
 }
 #home-title {
     display: flex;
@@ -89,7 +95,17 @@ input:hover {
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
-
+.stack-box {
+    width: 6rem;
+    height: 15rem;
+    background-color: #ECFEE8;
+    color: black;
+    margin: 1rem;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    font-size: 80px;
+}
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
