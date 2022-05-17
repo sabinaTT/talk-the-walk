@@ -166,6 +166,28 @@ label {
     font-family: 'Tajawal', sans-serif;
     font-size: 1rem;
 }
+#id_the_question {
+    font-family: 'Tajawal', sans-serif;
+    width: 50rem;
+    height: 2rem;   
+    margin: 1rem;
+}
+#id_answer {
+    font-family: 'Tajawal', sans-serif;
+    width: 50rem;
+    height: 10rem;  
+    margin: 1rem; 
+}
+#id_stack {
+    font-family: 'Tajawal', sans-serif;
+    width: 50rem;
+    height: 2rem;   
+    margin: 1rem;
+}
+#h2-create-question {
+    font-family: 'Tajawal', sans-serif;
+}
+
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
