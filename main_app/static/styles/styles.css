@@ -151,7 +151,7 @@ label {
     font-weight: bold;
 }
 #question {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 100%
 }
@@ -167,7 +167,7 @@ label {
     font-size: 1rem;
 }
 #id_the_question {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Tajawal', sans-serif; 
     width: 50rem;
     height: 2rem;   
     margin: 1rem;
@@ -187,7 +187,25 @@ label {
 #h2-create-question {
     font-family: 'Tajawal', sans-serif;
 }
-
+.create-question {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#list_questions_box {
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#question-box {
+    justify-content: center;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
