@@ -1,16 +1,27 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container-fluid">
-    <h2>Choose the stack you want to practice</h2>
-        <span>
-            {% for stack in stacks %}
-            <a href='{% url "stack_detail" stack.pk %}'></a>
+    <br />
+    <br />
+    <div class="row justify-content-sm-between" >
+        <div class="col-sm-7 d-flex justify-content-around" id='choose-stack-txt'>
+            <h2>Choose a stack to to practice</h2>
+        </div>
 
-            <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
-            {% endfor %}
-        </span>
-    <div>
-        <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
+        <div class="col-sm-4 d-flex justify-content-around">
+            <a href='{% url "create_stack" %}' title='Create a new stack' id='create-stack'>
+               +
+            </a>
+        </div>
+    </div>
+    <div class="row stack-box-total justify-content-center ">
+        {% for stack in stacks %}
+        <div class="col-sm-4 stack-box" >
+            <a href='{% url "stack_detail" stack.pk %}'>
+                {{stack.name}}
+            </a>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

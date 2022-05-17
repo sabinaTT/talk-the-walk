@@ -23,16 +23,18 @@
     </div> -->
     <div class="row">
         <nav class='h3'>
-    </div>
+
 
     {% if user.is_authenticated %}
 
-        <span><a href='{% url "logout" %}'>Logout</a></span>
-        <span><a href='{% url "list_stacks" %}'>My Stacks</a></span>
-        <span><a href='{% url "questions_index" %}'>My Questions</a></span>
+        <span><a id='a-nav' href='{% url "logout" %}'>Logout</a></span> | 
+        <span><a id='a-nav' href='{% url "about" %}'>About</a></span> | 
+        <span><a id='a-nav' href='{% url "list_stacks" %}'>My Stacks</a></span> | 
+        <span><a id='a-nav' href='{% url "questions_index" %}'>My Questions</a></span> | 
         {% endif %}
 
     </nav>
+</div>
 </div>
 
 
