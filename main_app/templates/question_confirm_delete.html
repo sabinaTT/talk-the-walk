@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
+<div class="container-fluid">
     <h1>{{ question.the_question }}</h1>
     <h3>Are you sure you want to delete this question?</h3>
     <form method='post'>
@@ -9,4 +10,5 @@
             <a href='{% url "questions_show" question.pk %}'>Cancel</a>
         </div>
     </form>
+</div>
 {% endblock %}

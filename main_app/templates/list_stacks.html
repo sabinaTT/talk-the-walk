@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
+<div class="container-fluid">
     <h2>Choose the stack you want to practice</h2>
         <span>
             {% for stack in stacks %}
@@ -11,5 +12,5 @@
     <div>
         <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
     </div>
-
+</div>
 {% endblock %}

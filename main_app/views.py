@@ -11,7 +11,6 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
 from django.urls import reverse
-# from django.utils.translation import gettext_lazy as _
 
 
 # Create your views here.
@@ -63,6 +62,7 @@ class DeleteStack(DeleteView):
     template_name = 'delete_stack.html'
     success_url = '/questions/'
 
+
 @login_required
 def questions_index(request):
     questions  = Question.objects.all()
@@ -78,7 +78,7 @@ class Create_Question(CreateView):
     model = Question
     fields = '__all__'
     template_name = 'question_form.html'
-    success_url = '/stack_detail'
+    success_url = '/questions'
 
 @method_decorator(login_required, name='dispatch')
 class Update_Question(UpdateView):
@@ -143,4 +143,7 @@ def login_view(request):
         # form = LoginForm()
         form = AuthenticationForm()
         return render(request, 'login.html', {'form': form})
+
+# def flip_card():
+
 

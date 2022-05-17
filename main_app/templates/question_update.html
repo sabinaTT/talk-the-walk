@@ -1,9 +1,10 @@
 {% extends 'base.html' %} 
 {% block body %}
+<div class="container-fluid">
 <form action='' method='post'>
     {% csrf_token %}
     {{form.as_p}}
     <input type='submit' value='Update' />
 </form>
-
+</div>
 {% endblock %}

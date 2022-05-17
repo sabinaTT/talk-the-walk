@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<div class="container-fluid">
     <h2>Create new question</h2>
     <form action="" method="post">
         {% csrf_token %}
@@ -9,5 +10,6 @@
         </table>
         <input type="submit" value="Save">
     </form>
+</div>
 
 {% endblock %}

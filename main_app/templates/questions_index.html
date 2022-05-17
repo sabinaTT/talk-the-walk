@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block body %}
-
-{% if user.is_authenticated %}
+<div class="container-fluid">
 {% for question in questions %}
     <div>
         <a href="{% url 'questions_show' question.pk %}">
             <div>
-                <span>{{ question.the_question }}</span>
-                <span>({{ question.stack }})</span>
+                <h4>{{ question.the_question }}</h4>
+            </a>
+                <h4>({{ question.stack }})</h4>
+                |
             </div>
-        </a>
+
     </div>
 {% endfor %}
 <a href='../questions/create'><button>Create a new question</button></a>
-{% endif %}
+</div>
 {% endblock %}

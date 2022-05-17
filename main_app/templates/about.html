@@ -1,11 +1,30 @@
 {% extends "base.html" %}
 {% block  body %}
-    <h1>About:</h1>
-    <p>Doesn’t matter if you’re entering the tech field with a higher education degree, a bootcamp certificate or raw experience, there’s no escaping from the interview process. If it’s a reality, and it MUST be done in order to reach that dream job, it’s best to just get to work.</p>
-    <br/>
-    <p>The good news is you’ve already walked the walk through schooling (including those self-taught). Now is the time to talk the walk. </p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <br />
+            <h1 class="text-justify about">About:</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify h4"> Doesn’t matter if you’re entering the tech field with a higher education degree, a bootcamp certificate or raw experience, there’s no escaping from the interview process. If it’s a reality, and it MUST be done in order to reach that dream job, it’s best to just get to work.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify h4">The good news is you’ve already walked the walk through schooling (including those self-taught). Now is the time to talk the walk. </p>
+        </div>
+    </div>  
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify h4">This app was designed for the purpose of refreshing your memory for the techni cal interview in a fun way (and in an attempt to save the flash-card culture). </p>
+        </div>
+    </div>
     <br />
-    <p>This app was designed for the purpose of refreshing your memory for the technical interview in a fun way (and in an attempt to save the flash-card culture). </p>
-    <br />
-    <button><a href='/login'>START</a></button>
+    <div class="row d-flex justify-content-center">
+            <button style='background-color: #C2EFEB'id='start_btn' class="col-sm-6 h1"><a href='/login' class='start_btn'>START</a></button>
+    </div>
+</div>
 {% endblock %}

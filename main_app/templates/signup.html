@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
 {% block body %}
-    <h2>Sign Up</h2>
-    <form method='post'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type='submit'>Sign Up</button>
-    </form>
-
+<div class="container-fluid">
+    <div class="login-box flex row justify-content-center align-self-center" style='background-color: #6EA4BF; padding: 2rem; width: 21rem; height: 45rem; border-radius: 5px;'>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Sign Up</h2>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-sm-12">
+        <form method='post' style="    font-family: 'Tajawal', sans-serif;" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type='submit' style=" font-family: 'Tajawal', sans-serif;" id='signup_btn'>Sign Up</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
 {% endblock %}
