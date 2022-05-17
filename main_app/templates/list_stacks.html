@@ -3,14 +3,14 @@
 <div class="container-fluid">
     <br />
     <br />
-    <div class="row justify-content-left  ">
-        <div class="col-sm-4 d-inline-flex justify-content-start">
-            <h2>Choose the stack you want to practice</h2>
+    <div class="row justify-content-sm-between" >
+        <div class="col-sm-7 d-flex justify-content-around" id='choose-stack-txt'>
+            <h2>Choose a stack to to practice</h2>
         </div>
 
-        <div class="col-sm-6 align-items-right d-inline-flex justify-content-end">
+        <div class="col-sm-4 d-flex justify-content-around">
             <a href='{% url "create_stack" %}' title='Create a new stack' id='create-stack'>
-               Create a new stack
+               +
             </a>
         </div>
     </div>

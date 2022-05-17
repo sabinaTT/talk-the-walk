@@ -106,16 +106,20 @@ input:hover {
     border-radius: 0.5rem;
     font-size: 80px;
 }
-#create-stack{
+#choose-stack-txt {
+    font-weight: bold;
     color: white;
     font-family: 'Tajawal', sans-serif;
     font-size: 30px;
 }
-#create-stack:hover {
-    color: rgb(255, 255, 255);
+#create-stack{
+    color: white;
     font-family: 'Tajawal', sans-serif;
-    font-size: 31px;
+    font-size: 60px;
+}
+#create-stack:hover {
     transition: 0.2s;
+    font-weight: bold;
 }
 
 /* 
