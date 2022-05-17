@@ -23,8 +23,16 @@ p {
 .start_btn {
     color: black;
 }
-#nav_bar {
+#abt_start_btn {
+    color: black;
+    border-radius: 5PX;
+    border: none;
+    font-family: 'tajawal', sans-serif;
+    padding: 0.5rem;
+}
+nav {
     font-family: 'Tajawal', sans-serif;
+    padding: 0.5rem;
 }
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none; 
