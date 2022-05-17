@@ -221,7 +221,57 @@ label {
     border-radius: 5px;
     color: black;
 }
-
+#question_list_box {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+#update-q-btn {
+    font-family: 'Tajawal', sans-serif;
+    margin-left: 4.1rem;
+}
+#delete-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    font-family: 'Tajawal', sans-serif;
+}
+#yes-delete-q {
+    font-family: 'Tajawal', sans-serif;
+    float: right;
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 6rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#yes-delete-q:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
+#cancel-delete-btn {
+    background-color: #41337A;
+    font-size: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    float: right;
+    color: white;
+}
+#cancel-delete-btn:hover {
+    background-color: #C2EFEB;
+    border-radius: 5px;
+    color: black;
+}
 
 /* 
 a:link, a:visited, a:hover, a:active {
