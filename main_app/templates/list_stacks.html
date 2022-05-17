@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-sm-6">
+    <br />
+    <br />
+    <div class="row justify-content-left  ">
+        <div class="col-sm-4 d-inline-flex justify-content-start">
             <h2>Choose the stack you want to practice</h2>
         </div>
-    </div>
-    <div class='row justify-content-center'>
-        <div class="col-sm-6">
-            <a href='{% url "create_stack" %}'>
-                <button>Create a new stack</button>
+
+        <div class="col-sm-6 align-items-right d-inline-flex justify-content-end">
+            <a href='{% url "create_stack" %}' title='Create a new stack' id='create-stack'>
+               Create a new stack
             </a>
         </div>
     </div>

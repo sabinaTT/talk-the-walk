@@ -34,7 +34,7 @@ nav {
     font-family: 'Tajawal', sans-serif;
     padding: 0.5rem;
 }
-#a-nav:hover, #a-nav:visited, #a-nav:hover, #a-nav:active {
+#a-nav:visited, #a-nav:hover, #a-nav:active {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -106,6 +106,18 @@ input:hover {
     border-radius: 0.5rem;
     font-size: 80px;
 }
+#create-stack{
+    color: white;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 30px;
+}
+#create-stack:hover {
+    color: rgb(255, 255, 255);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 31px;
+    transition: 0.2s;
+}
+
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
