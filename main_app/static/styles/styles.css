@@ -224,8 +224,8 @@ label {
 }
 #question_list_box {
     position: fixed;
-    top: 50%;
-    left: 60%;
+    top: 20%;
+    left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
@@ -274,7 +274,6 @@ label {
     color: black;
 }
 
-=======
 .create-question {
     position: fixed;
     top: 25%;
