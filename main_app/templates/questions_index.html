@@ -8,21 +8,22 @@
             <h2 class='create-question'>Create a new question</h2>
         </a>
     </div>
-    <br />
-
+    <div class="row" id='list_questions_box'>
+        
 {% for question in questions %}
     <div class='row'>
-        <div class="col-sm-8 h4">
+        <div class="col-sm-6 h4" id='question-box'>
         <a id='question' href="{% url 'questions_show' question.pk %}">
             <div>
                 <span>{{ question.the_question }}</span>
             </a>
                 |  <span id='stack-name'>{{ question.stack }}</span>
             </div>
-        </div>
+
     </div>
 {% endfor %}
 </div>
-
+{% endfor %}
+</div>
 </div>
 {% endblock %}
