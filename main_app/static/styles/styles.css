@@ -121,7 +121,51 @@ input:hover {
     transition: 0.2s;
     font-weight: bold;
 }
+#id_name {
+    background-color: #ECFEE8;
+    border: none;
+    border-radius: 2px;  
+    width: 15.5rem;
+}
 
+#save-stack {
+    background-color: #C2EFEB;
+    border: none;
+    border-radius: 2px;   
+    font-family: 'Tajawal', sans-serif;
+    width: 10rem;
+    text-align: center;
+}
+label {
+    font-size: 1.25rem;
+}
+#save-stack:hover {
+    font-weight: bold;
+}
+.h2 {
+    font-family: 'Tajawal', sans-serif;
+} 
+.create-question:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#question {
+    color: white;
+    font-weight: bold;
+    font-size: 100%
+}
+#question:hover {
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    transition: 0.2s;
+    font-weight: bold;
+}
+#stack-name {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+}
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;
@@ -156,9 +200,7 @@ h1 {
     padding: auto;
     position: relative;
 } */
-nav {
-    float: right;
-}
+
 p, h1 {
     text-align: justify;
     text-justify: inter-word;

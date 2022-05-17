@@ -1,16 +1,27 @@
 {% extends 'base.html' %} 
 {% block body %}
-<div class="container-fluid">
-	<h2>Create a new stack</h2>
-	
-	<form method="post">
-		<!-- Security Feature  -->
-		  {% csrf_token %} 
-		<!--  Generate inputs  -->
-		  {{form.as_p}} 
-		<!--  Submit form  -->
-		  <input type="submit" value="Save" />
-	</form>
+<div class="container-fluid ">
+	<div class="row">
+		<div class="col-sm-4 ">
+			<br />
+			<h2 class='h2'>Create a new stack</h2>
+		</div>
+	</div>
+	<div class="flex row justify-content-start">
+		<div class="flex-column col-lg-3 align-items-start">
+			<form method="post">
+					<!-- Security Feature  -->
+					{% csrf_token %} 
+					<!--  Generate inputs  -->
+					{{form.as_p}} 
+					<!--  Submit form  -->
+		</div>
+			<div class="flex-column col-lg-1 align-items-start">
+					<input id='save-stack' type="submit" value="Save" />
+			</form>
+			</div>
+	</div>
 </div>
+
 
 {% endblock %}
