@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
 {% block body %}
+<div class="container-fluid">
 <h3>{{ stack.name }}</h3>
 </div>
-{% if user.is_authenticated %}
+
 {% for question in stack.question_set.all %}
     <div>
         <a href="{% url 'questions_show' question.pk %}">
             <div>
-                <span>{{ question.the_question }}</span>
+                <span id="question-stk">{{ question.the_question }}</span>
                 <br />
             </div>
         </a>
 {% endfor %}
         <span>Author: {{ stack.user }}</span>
 <button id='pass_button'>Pass</button>
-<button id='flip_button'>Flip</button>
-{%endif%}
+<button id='flip_button' onclick="changeCard()">Flip</button>
 
+</div>
 
 {% endblock %}

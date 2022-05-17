@@ -1,11 +1,29 @@
 {% extends "base.html" %}
 {% block  body %}
-    <h1>About:</h1>
-    <p>Doesn’t matter if you’re entering the tech field with a higher education degree, a bootcamp certificate or raw experience, there’s no escaping from the interview process. If it’s a reality, and it MUST be done in order to reach that dream job, it’s best to just get to work.</p>
-    <br/>
-    <p>The good news is you’ve already walked the walk through schooling (including those self-taught). Now is the time to talk the walk. </p>
-    <br />
-    <p>This app was designed for the purpose of refreshing your memory for the technical interview in a fun way (and in an attempt to save the flash-card culture). </p>
-    <br />
-    <button><a href='/login'>START</a></button>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-2">
+            <br />
+            <h1 class="text-justify">About:</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify"> Doesn’t matter if you’re entering the tech field with a higher education degree, a bootcamp certificate or raw experience, there’s no escaping from the interview process. If it’s a reality, and it MUST be done in order to reach that dream job, it’s best to just get to work.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify">The good news is you’ve already walked the walk through schooling (including those self-taught). Now is the time to talk the walk. </p>
+        </div>
+    </div>  
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <p class="text-justify">This app was designed for the purpose of refreshing your memory for the techni cal interview in a fun way (and in an attempt to save the flash-card culture). </p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+            <button style="background-color: #C2EFEB" class="col-sm-6"><a href='/login'>START</a></button>
+    </div>
+</div>
 {% endblock %}

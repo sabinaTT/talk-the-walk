@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {% block body %}
+<div class="container-fluid">
     <h1>Login</h1>
     <form method='POST' action='.'>
         {% csrf_token %}
@@ -10,4 +11,5 @@
     <a href='/signup'> 
         <button>Sign Up</button>
     </a>
+</div>
 {% endblock %}
