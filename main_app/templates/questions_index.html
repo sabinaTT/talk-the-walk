@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container-fluid">
-{% for question in questions %}
-    <div>
-        <a href="{% url 'questions_show' question.pk %}">
-            <div>
-                <h4>{{ question.the_question }}</h4>
-            </a>
-                <h4>({{ question.stack }})</h4>
-                |
-            </div>
+    <br />
+    <div class="row">
+        <a href='../questions/create'>
+            <h2 class='create-question'>Create a new question</h2>
+        </a>
+    </div>
+    <br />
 
+{% for question in questions %}
+    <div class='row'>
+        <div class="col-sm-8 h4">
+        <a id='question' href="{% url 'questions_show' question.pk %}">
+            <div>
+                <span>{{ question.the_question }}</span>
+            </a>
+                |  <span id='stack-name'>{{ question.stack }}</span>
+            </div>
+        </div>
     </div>
 {% endfor %}
-<a href='../questions/create'><button>Create a new question</button></a>
+
 </div>
 {% endblock %}

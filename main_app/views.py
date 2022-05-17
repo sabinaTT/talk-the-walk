@@ -56,11 +56,11 @@ class Update_Stack(UpdateView):
     template_name = 'update_stack.html'
     success_url = '/stacks'
 
-@method_decorator(login_required, name='dispatch')
-class DeleteStack(DeleteView):
-    model = Stack
-    template_name = 'delete_stack.html'
-    success_url = '/questions/'
+# @method_decorator(login_required, name='dispatch')
+# class DeleteStack(DeleteView):
+#     model = Stack
+#     template_name = 'delete_stack.html'
+#     success_url = '/questions/'
 
 
 @login_required
