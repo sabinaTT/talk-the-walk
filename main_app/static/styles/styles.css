@@ -2,9 +2,9 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 } */
 
-.container-fluid,html {
+.container-fluid, html {
     background-color: #41337A;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Just Another Hand', cursive;
     color: white;
 }
 p {
@@ -12,15 +12,33 @@ p {
 }
 #start_btn {
     font-family: 'Tajawal', sans-serif;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    width: 30rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+.start_btn {
+    color: black;
 }
 #nav_bar {
     font-family: 'Tajawal', sans-serif;
 }
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none; 
-    color: black;
+    color: white;
 }
-
+#home-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.about {
+    font-size: 1rem;
+}
 /* 
 a:link, a:visited, a:hover, a:active {
     color: white;

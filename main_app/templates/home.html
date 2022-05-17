@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
 {% block body %}
-    <div class="container-fluid">
-    <h1 class='home-title'>Talk the Walk</h1>
-    <div id='dibi'>
-        <a href='/login'>
-            <button id='start_btn'>START</button>
-        </a>
+    <div class="container-fluid ">
+        <div class="flex row justify-content-center">
+            <div class="flex-column col-lg-12 align-items-center">
+                <h1 class='text-center pt-5' style='font-size: 12rem' id='home-title'>Talk the Walk</h1>
+            </div>
+        </div>
+    <div class="flex row justify-content-center">
+        <div class="flex-column col-lg-4 align-items-center">
+            <a href='/login'>
+                <button id='start_btn' style='background-color: #C2EFEB'id='start_btn' class="col-sm-6 h1">START</button>
+            </a>
+        </div>
     </div>
     <br />
-    <a href='about/'>About</a>
+    <div class="row flex justify-content-end">
+        <div class="col-sm-6 d-flex align-items-end h2" style="height: 20rem">
+            <a href='about/'>About</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
