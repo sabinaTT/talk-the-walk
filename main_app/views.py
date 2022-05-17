@@ -78,7 +78,7 @@ class Create_Question(CreateView):
     model = Question
     fields = '__all__'
     template_name = 'question_form.html'
-    success_url = '/stack_detail'
+    success_url = '/questions'
 
 @method_decorator(login_required, name='dispatch')
 class Update_Question(UpdateView):

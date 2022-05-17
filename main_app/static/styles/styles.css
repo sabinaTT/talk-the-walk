@@ -1,10 +1,27 @@
 /* * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 } */
- 
-/* body {
+
+.container-fluid,html {
     background-color: #41337A;
+    font-family: 'Rock Salt', cursive;
+    color: white;
 }
+p {
+    font-family: 'Tajawal', sans-serif;
+}
+#start_btn {
+    font-family: 'Tajawal', sans-serif;
+}
+#nav_bar {
+    font-family: 'Tajawal', sans-serif;
+}
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+    color: black;
+}
+
+/* 
 a:link, a:visited, a:hover, a:active {
     color: white;
     text-decoration: none;
