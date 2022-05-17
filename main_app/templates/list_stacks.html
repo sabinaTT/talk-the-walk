@@ -8,21 +8,19 @@
     </div>
     <div class='row justify-content-center'>
         <div class="col-sm-6">
-        <a href='{% url "create_stack" %}'><button>Create a new stack</button></a>
+            <a href='{% url "create_stack" %}'>
+                <button>Create a new stack</button>
+            </a>
         </div>
     </div>
     <div class="row stack-box-total justify-content-center ">
-            {% for stack in stacks %}
-   
-                <div class="col-sm-4 stack-box" >
-
-            <a href='{% url "stack_detail" stack.pk %}'></a>
-
-            <a href='{% url "stack_detail" stack.pk %}'>{{stack.name}}</a>
+        {% for stack in stacks %}
+        <div class="col-sm-4 stack-box" >
+            <a href='{% url "stack_detail" stack.pk %}'>
+                {{stack.name}}
+            </a>
         </div>
-
-            {% endfor %}
-        </div>
-
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
